@@ -145,6 +145,12 @@
     transition: transform 150ms ease;
   }
   .club:hover .arrow { transform: translateX(4px); }
+  .badge {
+    width: min(190px, 44vw);
+    height: auto;
+    display: block;
+    margin-top: clamp(48px, 7vh, 76px);
+  }
   footer {
     background: var(--navy);
     color: rgba(242, 239, 228, 0.75);
@@ -196,6 +202,7 @@
       <span class="go"><span class="site">stingraysrfc.com</span><span class="arrow">&#8594;</span></span>
     </a>
   </nav>
+  <img class="badge" src="images/sbrfc-badge.png" alt="SBRFC shield badge — a rugby ball in front of the Santa Barbara mountains, palm trees, and ocean" width="640" height="737">
 </main>
 <footer>Santa Barbara Rugby Football Club<span class="dot">&#9679;</span>Santa Barbara, California</footer>
 </body>
