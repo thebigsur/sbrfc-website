@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SBRFC — Santa Barbara Rugby Football Club</title>
+<meta name="description" content="Welcome to the SBRFC (Santa Barbara Rugby Football Club), the 501(c)3 non-profit for the promotion, encouragement, and extension of Rugby Union football in Santa Barbara County.">
+<meta name="theme-color" content="#1C2B4B">
+<link rel="icon" href="favicon.ico" sizes="48x48 32x32 16x16">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="SBRFC — Santa Barbara Rugby Football Club">
+<meta property="og:description" content="The 501(c)3 non-profit for the promotion, encouragement, and extension of Rugby Union football in Santa Barbara County.">
+<meta property="og:url" content="https://sbrfc.com/">
+<meta property="og:image" content="https://sbrfc.com/images/sbrfc-logo.png">
+<style>
+  @font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('fonts/vollkorn-latin-400-normal.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('fonts/vollkorn-latin-600-normal.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('fonts/vollkorn-latin-700-normal.woff2') format('woff2');
+  }
+  :root {
+    --navy: #1C2B4B;
+    --navy-deep: #16223C;
+    --green: #2E8B62;
+    --green-bright: #4DAE83;
+    --paper: #F7F5EE;
+    --cream: #F2EFE4;
+    --serif: 'Vollkorn', Georgia, 'Times New Roman', serif;
+    --sans: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    background: var(--paper);
+    color: var(--navy);
+    font-family: var(--serif);
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+  }
+  a { color: var(--green); text-decoration: none; }
+  a:hover { color: var(--navy); }
+  main {
+    flex: 1;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: clamp(40px, 7vh, 84px) 24px clamp(56px, 9vh, 104px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo {
+    width: min(430px, 82vw);
+    height: auto;
+    display: block;
+  }
+  .rule {
+    width: 56px;
+    height: 3px;
+    background: var(--green);
+    border-radius: 2px;
+    margin: clamp(28px, 4.5vh, 44px) 0 clamp(24px, 4vh, 36px);
+  }
+  .statement {
+    font-size: clamp(1.19rem, 1rem + 1.3vw, 1.66rem);
+    line-height: 1.55;
+    max-width: 33em;
+    text-wrap: pretty;
+    font-weight: 400;
+  }
+  .statement strong { font-weight: 700; }
+  .statement .full-name { font-size: 0.76em; color: rgba(28, 43, 75, 0.58); }
+  .clubs {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-top: clamp(44px, 7vh, 72px);
+    text-align: left;
+  }
+  .club {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    background: var(--navy);
+    color: var(--cream);
+    border-radius: 10px;
+    padding: 26px 26px 22px;
+    border: 1px solid var(--navy);
+    transition: transform 150ms ease, background-color 150ms ease, border-color 150ms ease;
+  }
+  .club:hover, .club:focus-visible {
+    background: var(--navy-deep);
+    border-color: var(--green);
+    color: var(--cream);
+    transform: translateY(-3px);
+  }
+  .club:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+  .club .kind {
+    font-family: var(--sans);
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--green-bright);
+  }
+  .club .name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.15;
+    margin-top: 6px;
+  }
+  .club .go {
+    margin-top: auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    font-family: var(--sans);
+    font-size: 0.8rem;
+    color: rgba(242, 239, 228, 0.66);
+  }
+  .club .arrow {
+    color: var(--green-bright);
+    font-size: 1.05rem;
+    transition: transform 150ms ease;
+  }
+  .club:hover .arrow { transform: translateX(4px); }
+  footer {
+    background: var(--navy);
+    color: rgba(242, 239, 228, 0.75);
+    font-family: var(--sans);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+    text-align: center;
+    padding: 18px 24px;
+  }
+  footer .dot { color: var(--green-bright); padding: 0 8px; }
+  @media (max-width: 760px) {
+    .clubs { grid-template-columns: 1fr; gap: 14px; }
+    .club { flex-direction: row; align-items: center; gap: 14px; padding: 20px 22px; }
+    .club .name { font-size: 1.35rem; margin-top: 2px; }
+    .club .go { margin: 0 0 0 auto; }
+    .club .go .site { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .club, .club .arrow { transition: none; }
+    .club:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <img class="logo" src="images/sbrfc-logo.png" alt="SBRFC logo — a grunion, a mermaid, and stingrays around the letters SBRFC" width="1254" height="1254">
+  <div class="rule" role="presentation"></div>
+  <p class="statement">Welcome to <strong>SBRFC</strong> <span class="full-name">(Santa&nbsp;Barbara Rugby Football Club)</span>, the 501(c)3 non-profit for the promotion, encouragement, and extension of Rugby&nbsp;Union football in Santa&nbsp;Barbara County.</p>
+  <nav class="clubs" aria-label="Santa Barbara rugby clubs">
+    <a class="club" href="https://grunionrugby.com/">
+      <span>
+        <span class="kind">Men's Rugby</span>
+        <span class="name" style="display:block">The Grunion</span>
+      </span>
+      <span class="go"><span class="site">grunionrugby.com</span><span class="arrow">&#8594;</span></span>
+    </a>
+    <a class="club" href="https://www.sbwomensrugby.com/">
+      <span>
+        <span class="kind">Women's Rugby</span>
+        <span class="name" style="display:block">The Mermaids</span>
+      </span>
+      <span class="go"><span class="site">sbwomensrugby.com</span><span class="arrow">&#8594;</span></span>
+    </a>
+    <a class="club" href="https://stingraysrfc.com/">
+      <span>
+        <span class="kind">Youth Rugby</span>
+        <span class="name" style="display:block">The Stingrays</span>
+      </span>
+      <span class="go"><span class="site">stingraysrfc.com</span><span class="arrow">&#8594;</span></span>
+    </a>
+  </nav>
+</main>
+<footer>Santa Barbara Rugby Football Club<span class="dot">&#9679;</span>Santa Barbara, California</footer>
+</body>
+</html>
