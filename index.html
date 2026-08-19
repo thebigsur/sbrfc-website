@@ -151,6 +151,13 @@
     display: block;
     margin-top: clamp(48px, 7vh, 76px);
   }
+  .mission {
+    font-size: clamp(1rem, 0.93rem + 0.35vw, 1.14rem);
+    line-height: 1.65;
+    max-width: 42em;
+    text-wrap: pretty;
+    color: rgba(28, 43, 75, 0.88);
+  }
   footer {
     background: var(--navy);
     color: rgba(242, 239, 228, 0.75);
@@ -167,6 +174,8 @@
     .club .name { font-size: 1.35rem; margin-top: 2px; }
     .club .go { margin: 0 0 0 auto; }
     .club .go .site { display: none; }
+    footer .item { display: block; line-height: 1.9; }
+    footer .dot { display: none; }
   }
   @media (prefers-reduced-motion: reduce) {
     .club, .club .arrow { transition: none; }
@@ -203,7 +212,9 @@
     </a>
   </nav>
   <img class="badge" src="images/sbrfc-badge.png" alt="SBRFC shield badge — a rugby ball in front of the Santa Barbara mountains, palm trees, and ocean" width="640" height="737">
+  <div class="rule" role="presentation"></div>
+  <p class="mission">The mission of the Santa&nbsp;Barbara Rugby Football Club is to promote the sport of rugby in our community by fostering athletic excellence, inclusivity, and personal development through teamwork, discipline, and sportsmanship. As a 501(c)(3) non-profit organization, we are committed to providing opportunities for youth and adults of all backgrounds to participate in and learn the game of rugby, supporting physical health, leadership, and lifelong community engagement.</p>
 </main>
-<footer>Santa Barbara Rugby Football Club<span class="dot">&#9679;</span>Santa Barbara, California</footer>
+<footer><span class="item">Santa Barbara Rugby Football Club</span><span class="dot">&#9679;</span><span class="item">2516 Mesa School Lane, Santa&nbsp;Barbara, CA&nbsp;93109</span><span class="dot">&#9679;</span><span class="item">EIN 93-4659131</span></footer>
 </body>
 </html>
