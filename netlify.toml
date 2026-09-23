@@ -3,6 +3,12 @@
 [build]
   publish = "."
 
+# Serve exactly what is in the repo. Netlify's "pretty URLs" post-processing was
+# rewriting about.html to /about in the served HTML, which left the canonical tags
+# and the sitemap pointing at a different URL shape than the links on the page.
+[build.processing]
+  skip_processing = true
+
 # Ad Grants requires the whole site over HTTPS with no mixed content.
 # Netlify force-TLS handles the http:// -> https:// redirect; these headers
 # make browsers keep it that way and lock down the obvious basics.

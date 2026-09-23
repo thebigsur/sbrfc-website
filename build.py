@@ -30,7 +30,7 @@ def header(active, p):
     for href, label in NAV:
         cur = ' aria-current="page"' if href == active else ""
         links.append(f'<a href="{p}{href}"{cur}>{label}</a>')
-    links.append(f'<a class="nav-donate" href="{p}support.html#donate">Donate</a>')
+    links.append(f'<a class="nav-donate" href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate</a>')
     nav = "\n        ".join(links)
     return f'''<a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -70,7 +70,7 @@ def footer(p):
         <li><a href="{p}support.html">Get Involved</a></li>
         <li><a href="{p}news.html">News &amp; Events</a></li>
         <li><a href="{p}contact.html">Contact</a></li>
-        <li><a href="{p}support.html#donate">Donate</a></li>
+        <li><a href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate</a></li>
         <li><a href="{p}privacy.html">Privacy policy</a></li>
       </ul>
     </div>
@@ -101,7 +101,7 @@ def analytics():
 <script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}
 gtag('js',new Date());gtag('config','{GA4_ID}');</script>'''
 
-def page(filename, title, description, body, depth=0, noindex=False):
+def page(filename, title, description, body, depth=0, noindex=False, head_extra=""):
     p = "../" * depth
     canonical = "https://sbrfc.com/" + ("" if filename == "index.html" else filename)
     robots = '\n<meta name="robots" content="noindex">' if noindex else ""
@@ -124,7 +124,7 @@ def page(filename, title, description, body, depth=0, noindex=False):
 <meta property="og:description" content="{description}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:image" content="https://sbrfc.com/images/sbrfc-logo.png">
-{analytics()}
+{head_extra}{analytics()}
 </head>
 <body>
 {header(filename if depth == 0 else "programs.html", p)}
@@ -150,7 +150,8 @@ def page(filename, title, description, body, depth=0, noindex=False):
 page("index.html",
 "SBRFC — Santa Barbara Rugby Football Club",
 "The Santa Barbara Rugby Football Club is a 501(c)(3) non-profit that supports rugby in Santa Barbara County: the Grunion men's club, the Mermaids women's club, and the Stingrays youth club.",
-f'''
+head_extra='<link rel="preload" as="image" href="images/sbrfc-logo.webp" type="image/webp" fetchpriority="high">\n',
+body=f'''
 <section class="hero">
   <div class="wrap">
     <picture>
@@ -227,7 +228,7 @@ f'''
     <h2>Rugby in this town runs on people who chip in</h2>
     <p class="lede">Every dollar given to SBRFC goes back into coaching, recruitment and dues assistance for players in Santa Barbara County. Every volunteer hour does the same. There is room for both.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="support.html#donate">Donate</a>
+      <a class="btn btn-primary" href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate</a>
       <a class="btn btn-ghost" href="support.html">Get involved</a>
     </div>
   </div>
@@ -625,7 +626,7 @@ f'''
     <p>A gift to SBRFC is a gift to rugby in this county rather than to one team. It goes to what decides whether a club stays competitive rather than merely surviving: recruiting and keeping local players, coaching, and club infrastructure. It also goes straight to individual players, because SBRFC covers season dues for anyone who cannot, and backs scholarship places in the youth club.</p>
 
     <div class="btn-row">
-      <a class="btn btn-primary" href="{DONATE_URL}" rel="noopener">Donate to SBRFC</a>
+      <a class="btn btn-primary" href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate to SBRFC</a>
     </div>
     <p class="callout-note" style="margin-top:1.2em"><strong>NOTE:</strong> <em>Our giving page runs on Zeffy, a fundraising service that is free to the club. At checkout Zeffy pre-fills an optional tip, 15% by default, about $15 on a $100 gift and $75 on a $500 one. That tip goes to <strong>Zeffy, not SBRFC</strong>, and it is not required. To skip it, click the tip box, choose <strong>Other</strong>, and enter <strong>$0</strong>.</em></p>
 
@@ -686,7 +687,7 @@ f'''
     <h2>Every gift stays in Santa Barbara</h2>
     <p class="lede">SBRFC is a volunteer-run club. What comes in goes back out to coaching, recruitment, club costs and dues assistance for players in this county.</p>
     <div class="btn-row">
-      <a class="btn btn-primary" href="{DONATE_URL}" rel="noopener">Donate</a>
+      <a class="btn btn-primary" href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate</a>
       <a class="btn btn-ghost" href="about.html">How the club is run</a>
     </div>
   </div>

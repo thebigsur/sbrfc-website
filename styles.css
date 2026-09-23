@@ -131,7 +131,7 @@ img { max-width: 100%; height: auto; }
 .site-nav a:focus-visible { outline: 3px solid var(--green-bright); outline-offset: 2px; }
 
 .nav-donate {
-  background: var(--green);
+  background: var(--green-dark);
   color: #fff !important;
   font-weight: 600;
   letter-spacing: 0.09em !important;
@@ -140,7 +140,7 @@ img { max-width: 100%; height: auto; }
   border-radius: 7px;
   margin-left: 8px;
 }
-.nav-donate:hover { background: var(--green-bright); color: #fff !important; }
+.nav-donate:hover { background: var(--green); color: #fff !important; }
 
 @media (max-width: 900px) {
   .nav-toggle { display: block; }
@@ -222,8 +222,8 @@ li + li { margin-top: 0.45em; }
   border: 2px solid transparent;
   transition: background-color 150ms ease, color 150ms ease, border-color 150ms ease;
 }
-.btn-primary { background: var(--green); color: #fff; }
-.btn-primary:hover { background: var(--green-dark); color: #fff; }
+.btn-primary { background: var(--green-dark); color: #fff; }
+.btn-primary:hover { background: #1B5C3F; color: #fff; }
 .btn-secondary { background: transparent; color: var(--navy); border-color: var(--navy); }
 .btn-secondary:hover { background: var(--navy); color: var(--cream); }
 .btn-ghost { background: transparent; color: var(--cream); border-color: rgba(242, 239, 228, 0.55); }
@@ -243,7 +243,7 @@ li + li { margin-top: 0.45em; }
   font-weight: 400;
 }
 .hero .statement strong { font-weight: 700; }
-.hero .statement .full-name { font-size: 0.76em; color: rgba(28, 43, 75, 0.58); }
+.hero .statement .full-name { font-size: 0.76em; color: rgba(28, 43, 75, 0.68); }
 
 /* ---------- Cards ---------- */
 
