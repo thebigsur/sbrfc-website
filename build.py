@@ -149,7 +149,7 @@ def page(filename, title, description, body, depth=0, noindex=False, head_extra=
 
 page("index.html",
 "SBRFC — Santa Barbara Rugby Football Club",
-"The Santa Barbara Rugby Football Club is a 501(c)(3) non-profit that supports rugby in Santa Barbara County: the Grunion men's club, the Mermaids women's club, and the Stingrays youth club.",
+"The Santa Barbara Rugby Football Club is a 501(c)(3) non-profit, EIN 93-4659131. We fund coaching, player recruitment and season dues so that anyone in Santa Barbara County can play rugby.",
 head_extra='<link rel="preload" as="image" href="images/sbrfc-logo.webp" type="image/webp" fetchpriority="high">\n',
 body=f'''
 <section class="hero">
@@ -163,28 +163,55 @@ body=f'''
   </div>
 </section>
 
-<section>
+<section class="mission-band">
   <div class="wrap">
-    <span class="eyebrow">What we do</span>
-    <h2>The non-profit behind rugby in Santa Barbara</h2>
-    <p class="lede">Rugby has been played in this town since 1978. SBRFC was incorporated in California in 2023 and granted 501(c)(3) status in 2026, for one purpose: to support the sport in Santa Barbara County and keep people playing it.</p>
-    <p>SBRFC is not itself a team. Three independent clubs play here, and SBRFC supports all three. The Grunion play men's rugby, the Mermaids play women's rugby, and the Stingrays run youth rugby from U8 to U18. Each club runs its own coaching, training and fixtures.</p>
-    <p>What SBRFC does is the part that costs money and carries no glamour. Support goes to what decides whether a club stays competitive rather than merely surviving: recruiting and keeping local players, coaching, and club infrastructure. It also goes to individual players. Season dues are $250 at the men's club and $150 at the women's club, and SBRFC covers them for anyone who cannot.</p>
-    <p>None of the three clubs ask for experience. Most of the adults on a Santa Barbara roster had never touched a rugby ball before they walked onto the field, and the youth club is built for children who are new to the game. Turning up is the entire entry requirement.</p>
+    <picture>
+      <source srcset="images/sbrfc-badge.webp" type="image/webp">
+      <img class="badge" src="images/sbrfc-badge.png" alt="SBRFC shield badge, a rugby ball in front of the Santa Barbara mountains, palm trees, and ocean" width="380" height="438">
+    </picture>
+    <div class="rule rule-center" role="presentation"></div>
+    <h2>Our mission</h2>
+    <p>The mission of the Santa&nbsp;Barbara Rugby Football Club is to promote the sport of rugby in our community by fostering athletic excellence, inclusivity, and personal development through teamwork, discipline, and sportsmanship. As a 501(c)(3) non-profit organization, we are committed to providing opportunities for youth and adults of all backgrounds to participate in and learn the game of rugby, supporting physical health, leadership, and lifelong community engagement.</p>
+    <p class="status-line">Santa Barbara Rugby Football Club is a 501(c)(3) non-profit organization, EIN {EIN}, incorporated in California in 2023. Donations are tax-deductible to the extent allowed by law.</p>
   </div>
 </section>
 
 <section>
   <div class="wrap">
-    <span class="eyebrow">The clubs we support</span>
-    <h2>Find the team that fits</h2>
+    <span class="eyebrow">What we do</span>
+    <h2>We pay for the parts of rugby that people cannot</h2>
+    <p class="lede">Rugby has been played in Santa Barbara since 1978. SBRFC is the registered non-profit behind the sport in this county. We raise money for rugby here and put it back into coaching, into the clubs, and into individual players who would otherwise have to stop.</p>
+
+    <h3>Where the money goes</h3>
+    <ul>
+      <li><strong>Season dues for players who cannot pay them.</strong> Dues run $250 at the men's club and $150 at the women's club. When a player cannot cover that, SBRFC does, and the conversation stays between that player and the treasurer.</li>
+      <li><strong>Scholarship places in youth rugby.</strong> No child in Santa Barbara should miss a season because of the registration fee, so the club backs scholarship support in the youth program.</li>
+      <li><strong>Coaching.</strong> Qualified, certified coaching across all three clubs, funded properly rather than leaned on until a volunteer burns out.</li>
+      <li><strong>Local player recruitment and retention.</strong> Finding people in this county who have never played, getting them to a first session, and keeping them in the sport season after season.</li>
+      <li><strong>Club infrastructure.</strong> The standing costs a season carries before a ball is kicked.</li>
+    </ul>
+
+    <h3>How we are run</h3>
+    <p>SBRFC is run by a volunteer board and has no paid staff and no office. Money comes from players and their families, from local businesses, and from a group of long-standing donors through the '78 Club. The club files with the IRS and the State of California every year and publishes those filings, and the treasurer will send a financial summary to anyone who asks.</p>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="about.html">How the club is run</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <span class="eyebrow">The rugby we support</span>
+    <h2>Three clubs, every age, no experience needed</h2>
+    <p>Between them, the three clubs SBRFC supports put rugby on a field in Santa Barbara most weeks of the year, for players from eight years old upwards. None of them ask for experience. Most of the adults on a Santa Barbara roster had never touched a rugby ball before they walked on, and the youth club is built for children who are new to the game.</p>
+    <p>They train at Elings Park, 1298 Las Positas Road, and Chase Palm Park, 323 East Cabrillo Boulevard. Both are public parks, and anyone is welcome to come and watch.</p>
     <div class="cards">
 
       <div class="card">
         <span class="kind">Men's Rugby</span>
         <h3>The Grunion</h3>
-        <p>Santa Barbara's men's club, playing since 1978 and open to anyone 18 or over. The Grunion play Division 2 men's rugby, training twice a week at Elings Park through a pre-season from October to December, then a Saturday fixture list from January to April.</p>
-        <p>No tryout and no experience needed. Season dues are $250, and SBRFC helps players who cannot cover them.</p>
+        <p>Santa Barbara's men's club, playing since 1978 and open to anyone 18 or over. Division 2 rugby, training twice a week at Elings Park through a pre-season from October to December, then a Saturday fixture list from January to April.</p>
+        <p>No tryout and no experience needed. Season dues are $250, and SBRFC covers them for players who cannot.</p>
         <a class="go" href="programs/grunion.html">Grunion program details <span class="arrow">&#8594;</span></a>
       </div>
 
@@ -192,7 +219,7 @@ body=f'''
         <span class="kind">Women's Rugby</span>
         <h3>The Mermaids</h3>
         <p>Competitive women's rugby for players 18 and over, open to women and nonconforming players from Goleta, Santa Barbara and the neighboring cities. The Mermaids compete in the Southern California Senior Women's Division II.</p>
-        <p>The club trains through the October to March season and keeps a lighter touch rugby program running over the summer. Season dues are $150, with help available.</p>
+        <p>The club trains through the October to March season and keeps a lighter touch rugby program running over the summer. Dues are $150, with help available.</p>
         <a class="go" href="programs/mermaids.html">Mermaids program details <span class="arrow">&#8594;</span></a>
       </div>
 
@@ -205,28 +232,16 @@ body=f'''
       </div>
 
     </div>
-  </div>
-</section>
-
-<section class="mission-band">
-  <div class="wrap">
-    <picture>
-      <source srcset="images/sbrfc-badge.webp" type="image/webp">
-      <img class="badge" src="images/sbrfc-badge.png" alt="SBRFC shield badge, a rugby ball in front of the Santa Barbara mountains, palm trees, and ocean" width="380" height="438" loading="lazy">
-    </picture>
-    <div class="rule rule-center" role="presentation"></div>
-    <h2>Our mission</h2>
-    <p>The mission of the Santa&nbsp;Barbara Rugby Football Club is to promote the sport of rugby in our community by fostering athletic excellence, inclusivity, and personal development through teamwork, discipline, and sportsmanship. As a 501(c)(3) non-profit organization, we are committed to providing opportunities for youth and adults of all backgrounds to participate in and learn the game of rugby, supporting physical health, leadership, and lifelong community engagement.</p>
-    <div class="btn-row" style="justify-content:center">
-      <a class="btn btn-secondary" href="about.html">More about SBRFC</a>
+    <div class="btn-row">
+      <a class="btn btn-secondary" href="programs.html">Compare all three programs</a>
     </div>
   </div>
 </section>
 
 <section class="cta-band">
   <div class="wrap">
-    <h2>Rugby in this town runs on people who chip in</h2>
-    <p class="lede">Every dollar given to SBRFC goes back into coaching, recruitment and dues assistance for players in Santa Barbara County. Every volunteer hour does the same. There is room for both.</p>
+    <h2>Every dollar stays in Santa Barbara County</h2>
+    <p class="lede">SBRFC has no paid staff. What comes in goes back out to coaching, recruitment, club costs and dues assistance for players in this county. Volunteer hours do the same work, and the club needs both.</p>
     <div class="btn-row">
       <a class="btn btn-primary" href="{DONATE_URL}" target="_blank" rel="noopener noreferrer">Donate</a>
       <a class="btn btn-ghost" href="support.html">Get involved</a>
@@ -293,11 +308,11 @@ f'''
 
 <section>
   <div class="wrap">
-    <span class="eyebrow">Structure</span>
-    <h2>How SBRFC and the clubs fit together</h2>
-    <p>The Grunion, the Mermaids and the Stingrays are independent clubs. Each has its own coaches, its own committee, its own competition and its own culture, and each runs its own training, fixtures and registration. SBRFC does not run any of them.</p>
-    <p>What SBRFC does is support them. It is the registered non-profit that can receive tax-deductible donations and sponsorship on behalf of rugby in this county and direct that money to the three clubs and to the players in them. When you give to SBRFC, you are giving to rugby in Santa Barbara rather than to one team.</p>
-    <h3>Where that support goes</h3>
+    <span class="eyebrow">What we do</span>
+    <h2>How SBRFC supports rugby in this county</h2>
+    <p>SBRFC is the registered non-profit behind rugby in Santa Barbara County. It receives tax-deductible donations and sponsorship on behalf of the sport here, and puts that money into coaching, into recruiting and keeping local players, and into individuals who would otherwise have to stop playing. Giving to SBRFC is giving to rugby in Santa Barbara rather than to one team.</p>
+    <p>Three clubs play here, and SBRFC supports all three. Each of them is separately organized, with its own coaches, its own committee and its own competition, and each runs its own training, fixtures and registration. SBRFC's job is the funding and the paperwork that sit underneath all of it.</p>
+    <h3>Where the money goes</h3>
     <ul>
       <li><strong>Player recruitment and retention.</strong> Bringing local players into the sport and keeping them in it season after season.</li>
       <li><strong>Coaching.</strong> Supporting qualified coaching at all three clubs rather than relying on a volunteer until they burn out.</li>
