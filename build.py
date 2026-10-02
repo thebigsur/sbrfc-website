@@ -739,7 +739,7 @@ f'''
       <div class="entry">
         <span class="when">22 August 2026 &middot; Elings Park</span>
         <h3>SB Sevens tournament</h3>
-        <p>The Mermaids hosted the 2026 SB Sevens tournament at Elings Park, closing out a summer of touch rugby at Chase Palm Park before the fifteens season opened in October.</p>
+        <p>SBRFC hosted the 2026 SB Sevens tournament at Elings Park, closing out a summer of touch rugby at Chase Palm Park before the fifteens season opened in October.</p>
       </div>
 
       <div class="entry">
@@ -920,7 +920,7 @@ f'''
   <div class="wrap">
     <span class="eyebrow">Privacy</span>
     <h1>Privacy policy</h1>
-    <p class="lede">This policy covers sbrfc.com, the website of the Santa Barbara Rugby Football Club. Last updated 23 September 2026.</p>
+    <p class="lede">This policy covers sbrfc.com, the website of the Santa Barbara Rugby Football Club. Last updated 2 October 2026.</p>
   </div>
 </section>
 
@@ -931,7 +931,8 @@ f'''
 
     <h3>What this site collects</h3>
     <p>sbrfc.com uses Google Analytics to understand how many people visit and which pages they read. Google Analytics sets cookies in your browser and records information such as the pages you view, roughly how long you spend on them, the type of device and browser you are using, and an approximate location derived from your IP address. We see this as aggregate statistics. We do not use it to identify individual visitors, and we have not enabled advertising or remarketing features.</p>
-    <p>If you would rather not be counted, Google publishes a browser opt-out add-on at <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">tools.google.com/dlpage/gaoptout</a>, and most browsers offer their own cookie and tracking controls.</p>
+    <p>Our rugby landing page, sbrfc.com/landing, is where our Google search ads send people. That page also carries the Google Ads tag, which sets a cookie so Google can tell us when someone who clicked one of our ads goes on to visit a club's website. We use it only to count which ads work. We do not use it to identify individual visitors, and we do not run remarketing ads.</p>
+    <p>If you would rather not be counted, Google publishes a browser opt-out add-on at <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener">tools.google.com/dlpage/gaoptout</a>, and most browsers offer their own cookie and tracking controls. Google explains how its advertising cookies work at <a href="https://policies.google.com/technologies/ads" rel="noopener">policies.google.com/technologies/ads</a>.</p>
     <p>Our host, Netlify, keeps standard server logs, which include IP addresses, for security and reliability purposes.</p>
 
     <h3>What this site does not collect</h3>
@@ -951,6 +952,7 @@ f'''
 
     <h3>Changes</h3>
     <p>If this policy changes we will update the date at the top of the page. Material changes will be described here rather than made quietly.</p>
+    <p>2 October 2026: added the Google Ads tag on the rugby landing page, described under What this site collects.</p>
 
     <h3>Contact</h3>
     <p>Questions about this policy, or a request to see or delete anything we hold about you: <a href="mailto:{GENERAL_EMAIL}">{GENERAL_EMAIL}</a>, or write to {LEGAL_NAME}, {ADDRESS}.</p>
