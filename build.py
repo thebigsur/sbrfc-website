@@ -40,8 +40,8 @@ ADS_CLUB_CLICK = "AW-18473978317/GDv2CLv6sI4dEM2TiulE"
 # Bump when styles.css or site.js change, so browsers fetch the new copy.
 ASSET_V = "20261003"
 # Sitemap lastmod and the privacy policy's "last updated" date.
-RELEASE_DATE = "2026-10-03"
-PRIVACY_UPDATED = "3 October 2026"
+RELEASE_DATE = "2026-10-02"
+PRIVACY_UPDATED = "2 October 2026"
 
 # ---------------------------------------------------------------------------
 # CLUB CONTACTS
@@ -1644,8 +1644,7 @@ body=f'''
 
     <h3>Changes</h3>
     <p>If this policy changes we will update the date at the top of the page. Material changes will be described here rather than made quietly.</p>
-    <p>{PRIVACY_UPDATED}: added the sign-up forms (described under What our forms collect and Who sees it), and the Google Ads tag now runs on every page rather than only the old landing page.</p>
-    <p>2 October 2026: added the Google Ads tag on the rugby landing page.</p>
+    <p>{PRIVACY_UPDATED}: added the Google Ads tag, first on the rugby landing page and then on every page, and added the sign-up forms described under What our forms collect and Who sees it.</p>
 
     <h3>Contact</h3>
     <p>Questions about this policy, or a request to see or delete anything we hold about you: <a href="mailto:{TREASURER}">{TREASURER}</a>, or write to {LEGAL_NAME}, {ADDRESS}.</p>
