@@ -3,11 +3,11 @@
 [build]
   publish = "."
 
-# Serve exactly what is in the repo. Netlify's "pretty URLs" post-processing was
-# rewriting about.html to /about in the served HTML, which left the canonical tags
-# and the sitemap pointing at a different URL shape than the links on the page.
-[build.processing]
-  skip_processing = true
+# Pages link to clean URLs (/about, /play) and the canonical tags and sitemap
+# use the same shape, so Netlify's pretty-URL processing has nothing to fix.
+# (skip_processing was removed in Oct 2026: it never stopped the link rewriting,
+# and skipping post-processing risks skipping the form detection that the
+# sign-up forms on /play, /mens, /womens, /youth, /sponsor and /coach need.)
 
 # Ad Grants requires the whole site over HTTPS with no mixed content.
 # Netlify force-TLS handles the http:// -> https:// redirect; these headers
@@ -35,3 +35,15 @@
   for = "/styles.css"
   [headers.values]
     Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/site.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# Thank-you pages are form destinations and Google Ads conversion pages:
+# keep them out of search results. The <meta name="robots"> tag says the same.
+[[headers]]
+  for = "/thanks-*"
+  [headers.values]
+    X-Robots-Tag = "noindex"

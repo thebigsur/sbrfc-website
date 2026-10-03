@@ -1,0 +1,14 @@
+# Netlify redirects for sbrfc.com (October 2026).
+# The standalone /landing page and the old /programs pages were replaced by
+# /play, /mens, /womens and /youth. Query strings (?team=mens, ?gclid=...)
+# carry through, and /play reads ?team= to open the matching team card.
+/landing                  /play     301!
+/landing.html             /play     301!
+/programs                 /play     301!
+/programs.html            /play     301!
+/programs/grunion         /mens     301!
+/programs/grunion.html    /mens     301!
+/programs/mermaids        /womens   301!
+/programs/mermaids.html   /womens   301!
+/programs/stingrays       /youth    301!
+/programs/stingrays.html  /youth    301!
